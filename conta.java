@@ -6,7 +6,7 @@ private String nome;
 private double saldo;
 private boolean ativa;
 
-//construtor
+//construtor //(gerencia as informações pra adicionar novos objetos à classe)
     public conta(int n_conta, String nome) {
         this.n_conta = n_conta;
         this.nome = nome;
@@ -15,31 +15,59 @@ private boolean ativa;
     }
 
 //métodos
-    public void depositar(double valor) {
+    public void depositar(double valor) { 
         if (ativa == true && valor > 0) {
                 saldo = saldo + valor;
     }
     }
     public void sacar (double valor) {
-        if (ativa == true && valor <= saldo) {
+        if (ativa == true && valor <= saldo && valor > 0) {
                 saldo = saldo - valor;
         }
     }
     public void desativar() {
         if (ativa == true) {
-            ativa == false;
+            ativa = false;
         }
     }
     public void ativar() {
         if (ativa == false) {
-            ativa == true;
+            ativa = true;
         }
     }
-    public void exibir (to String) {
-        return "Número da conta: " + ativa +
-               "\nNome: " + nome +
-               "\nSaldo: " + saldo + 
-               "\nAtiva: " + ativa;
+   public void exibir(){
+    System.out.println(this.toString());
+   }
+    public String toString(){  //retorna as informações
+        return "Número da conta: " + n_conta +
+        "\n Nome: " + nome +
+        "\n Saldo: " + saldo +
+        "\n Ativa? " + ativa;
     }
-    
-}
+
+    public int getNumeroconta() {
+        return n_conta;
+    }
+    public void setNumeroconta( int n_conta){
+        this.n_conta = n_conta;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome( String nome){
+        this.nome = nome;
+    }
+    public double getSaldo() {
+        return saldo;
+    }
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+    public boolean getAtiva() {
+        return ativa;
+    }
+    public void setAtiva(boolean ativa) {
+        this.ativa = ativa;
+    }
+ }
+
