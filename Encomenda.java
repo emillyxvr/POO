@@ -11,7 +11,7 @@ public class Encomenda{
         this.status = status;
     }
 
-    public String toString(){
+    public String toString(){ //retorna uma representação textual do obj.
         return
         "Código da encomenda: " + codigo +
         "\n Destinatário: " + destinatario +
@@ -19,16 +19,16 @@ public class Encomenda{
         "\n Status da encomenda: " + status;
     }
 
-    public void exibirInfo(){
+    public void exibirInfo(){ //chama o toString pra exibir as inform. na tela
         System.out.println(toString());
     }
 
     public void atualizarStatus(String novoStatus) {
-        this.status = novoStatus;
+        this.status = novoStatus; //troca o valor do atributos pelo parâmetro recebido
         System.out.println("Status atualizado para: " + status);
     }
 
-    public int getCodigo(){
+    public int getCodigo(){ //método get que vai servir p/ o método buscarPorCodigo
         return codigo;
     }
 }
