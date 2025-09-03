@@ -23,7 +23,7 @@ public class Encomenda{
         System.out.println(toString());
     }
 
-    public void atualizarStatus(String novoStatus) {
+    public void atualizarStatus(String novoStatus) { //atualiza o status da encomenda e imprime a nova situação 
         this.status = novoStatus; //troca o valor do atributos pelo parâmetro recebido
         System.out.println("Status atualizado para: " + status);
     }
