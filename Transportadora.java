@@ -29,8 +29,9 @@ public class Transportadora{
     }
 
     public void atualizar(String status){
-        for (int i = 0; i < quantidade; i++){
-            encomenda[i].atualizarStatus(status);
+        for (int i = 0; i < quantidade; i++){ //cria uma variáv. de controle i q cmc em 0 e enqt i for menor q qntd. o laço continua
+//i++: aumenta o valor da variável em 1, usando primeiro o valor atual de i, dps soma 1 (incremento)
+            encomenda[i].atualizarStatus(status); //acessa a posição i do vetor encomenda, e atualiza o status de todas as encomendas p/ o vetor recebido
         }
     }
 }
